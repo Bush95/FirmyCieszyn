@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang=pl>
+<head>
+  <meta charset=UTF-8>
+  <meta content="width=device-width,initial-scale=1" name=viewport>
+  <meta content="ie=edge" http-equiv=X-UA-Compatible>
+  <link href=images/favicons/apple-touch-icon.png rel=apple-touch-icon sizes=180x180>
+  <link href=images/favicons/favicon-32x32.png rel=icon sizes=32x32 type=image/png>
+  <link href=images/favicons/favicon-16x16.png rel=icon sizes=16x16 type=image/png>
+  <link href=images/favicons/manifest.json rel=manifest>
+  <link href=images/favicons/safari-pinned-tab.svg rel=mask-icon>
+<meta content=#ffffff name=theme-color>
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel=stylesheet>
+  <link href=https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css rel=stylesheet crossorigin=anonymous integrity=sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u>
+  <link href=css/style.css rel=stylesheet>
+  <script src=https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js></script>
+  <title>FirmyCieszyn</title>
+</head>
+<body>
+  <h1 class=sr-only>Wyszukiwarka firm - znajdź lub dodaj firmę</h1>
+  <section class=page-nav>
+    <h2 class=sr-only>Menu głowne</h2>
+    <nav class="navbar navbar-fixed-top" id=nav-js>
+      <h3 class=sr-only>Nawigacja</h3>
+      <div class=container>
+        <div class=navbar-header>
+          <button class="collapsed navbar-toggle" type=button aria-expanded=false data-toggle=collapse id=burger-js data-target=#bs-example-navbar-collapse-1>
+            <span class=sr-only>Toggle navigation</span>
+            <span class=icon-bar></span>
+            <span class=icon-bar></span>
+            <span class=icon-bar></span>
+          </button>
+          <a href=#page-search class=navbar-brand id=scroll-search-js>
+            <img alt="page logo" src=images/logo.png class=img-responsive>
+          </a>
+        </div>
+        <div class="collapse navbar-collapse" id=bs-example-navbar-collapse-1>
+          <ul class="nav navbar-nav navbar-right">
+            <li><div class=dropdown>
+              <button class="btn navbar-btn btn-default" type=button aria-expanded=false data-toggle=dropdown id=dLabel aria-haspopup=true>
+                Zaloguj
+              </button>
+              <ul class=dropdown-menu aria-labelledby=dLabel>
+                <li>
+                  <form>
+                    <div class=form-group>
+                      <label for=exampleInputEmail1>Adres email</label>
+                      <input class=form-control type=email id=exampleInputEmail1 placeholder="Adres email">
+                    </div>
+                    <div class=form-group>
+                    <label for=exampleInputPassword1>Hasło</label>
+                    <input class=form-control type=password id=exampleInputPassword1 placeholder=Hasło>
+                    </div>
+                    <button class="btn btn-primary" type=submit>Zaloguj</button>
+                  </form>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li><button class="btn navbar-btn btn-default" type=button>Zarejestruj</button></li>
+            <li><a href=#page-offer class="btn btn-primary navbar-btn" id=scroll-offer-js>+ Dodaj firmę</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </section>
+  <section class=page-search>
+    <h2 class=sr-only>Wyszukiwanie firm</h2>
+    <div class=container>
+      <form class=form-inline>
+        <input placeholder="Nazwa usługi" name=name>
+        <select name=category>
+          <option value="" disabled selected>Wybierz branże</option>
+          <option value=lorem1>Lorem ipsum.</option>
+          <option value=lorem2>Lorem ipsum.</option>
+          <option value=lorem3>Lorem ipsum.</option>
+          <option value=lorem4>Lorem ipsum.</option>
+          <option value=lorem5>Lorem ipsum.</option>
+        </select>
+        <input class="btn btn-primary" type=submit value=Znajdź>
+      </form>
+    </div>
+  </section>
+  <section class=page-reccomended>
+    <div class=container>
+      <header>
+        <h2>Proponowane firmy</h2>
+        <p>Napisz i dowiedz się więcej o ofercie</p>
+      </header>
+      <div class=row>
+        <div class=col-sm-4>
+          <div class=reccomended-item>
+            <div class=reccomended-img>
+              <img alt=ss src=images/seat-cushion-1099616_640.jpg>
+            </div>
+            <div class=reccomended-description>
+              <h3>Vag expert</h3>
+                <div class=reccomended-rating>
+                  <span class="glyphicon glyphicon-star yellow" aria-hidden=true></span><span class="glyphicon glyphicon-star yellow" aria-hidden=true></span><span class="glyphicon glyphicon-star yellow" aria-hidden=true></span><span class="glyphicon glyphicon-star yellow" aria-hidden=true></span><span class="glyphicon glyphicon-star" aria-hidden=true></span>
+                  <span> 4/5</span><span> ( 20 )</span>
+                </div>
+                <div class=reccomended-location>
+                  <span class="glyphicon glyphicon-map-marker" aria-hidden=true></span>
+                  <span> Cieszyn, ul. Mennicza 1</span>
+                </div>
+                <div class=reccomended-text>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente?<p>
+                </div>
+                <div class=reccomended-contact>
+                  <p><span class="glyphicon glyphicon-earphone" aria-hidden=true></span> +48 332 123 123</p>
+                  <a href=#><span class="glyphicon glyphicon-globe" aria-hidden=true></span> www.vag-experts.pl</a>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class=col-sm-4>
+          <div class=reccomended-item>
+            <div class=reccomended-img>
+              <img alt=ss src=images/excavators-1174428_640.jpg>
+            </div>
+            <div class=reccomended-description>
+              <h3>wynajem koparek - zbych</h3>
+                <div class=reccomended-rating>
+                  <span class="glyphicon glyphicon-star yellow" aria-hidden=true></span><span class="glyphicon glyphicon-star yellow" aria-hidden=true></span><span class="glyphicon glyphicon-star yellow" aria-hidden=true></span><span class="glyphicon glyphicon-star yellow" aria-hidden=true></span><span class="glyphicon glyphicon-star" aria-hidden=true></span>
+                  <span> 4/5</span><span> ( 20 )</span>
+                </div>
+                <div class=reccomended-location>
+                  <span class="glyphicon glyphicon-map-marker" aria-hidden=true></span>
+                  <span> Cieszyn, ul. Mennicza 1</span>
+                </div>
+                <div class=reccomended-text>
+                  <p>Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur.consectetur adipisicing elit. Sapiente?<p>
+                </div>
+                <div class=reccomended-contact>
+                  <p><span class="glyphicon glyphicon-earphone" aria-hidden=true></span> +48 332 123 123</p>
+                  <a href=#><span class="glyphicon glyphicon-globe" aria-hidden=true></span> www.truck-experts.pl</a>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class=col-sm-4>
+          <div class=reccomended-item>
+            <div class=reccomended-img>
+              <img alt=ss src=images/cosmetics-1543276_640.jpg>
+            </div>
+            <div class=reccomended-description>
+              <h3>Joanna kowalska - makijaż</h3>
+                <div class=reccomended-rating>
+                  <span class="glyphicon glyphicon-star yellow" aria-hidden=true></span><span class="glyphicon glyphicon-star yellow" aria-hidden=true></span><span class="glyphicon glyphicon-star yellow" aria-hidden=true></span><span class="glyphicon glyphicon-star yellow" aria-hidden=true></span><span class="glyphicon glyphicon-star" aria-hidden=true></span>
+                  <span> 4/5</span><span> ( 20 )</span>
+                </div>
+                <div class=reccomended-location>
+                  <span class="glyphicon glyphicon-map-marker" aria-hidden=true></span>
+                  <span> Cieszyn, ul. Mennicza 1</span>
+                </div>
+                <div class=reccomended-text>
+                  <p>Lorem ipsum dolor sit amet, consectetur Lorem ipsum.adipisicing elit. Sapiente?<p>
+                </div>
+                <div class=reccomended-contact>
+                  <p><span class="glyphicon glyphicon-earphone" aria-hidden=true></span> +48 332 123 123</p>
+                  <a href=#><span class="glyphicon glyphicon-globe" aria-hidden=true></span> www.vag-experts.pl</a>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+    <section class=page-trade>
+      <div class=container>
+          <header>
+            <h2>Branże</h2>
+            <p>Jakiej branży szukasz?</p>
+          </header>
+          <div class=row>
+              <div class="col-sm-4 trade-select" id=trade-select-js>
+                <div class=row>
+                  <div class=col-xs-6>
+                    <a href=# class="trade-item active" data-category=moto1>
+                        <div class=item-icon>
+                          <img alt=car src=images/car.png>
+                          <p>motoryzacja</p>
+                        </div>
+                    </a>
+                  </div>
+                    <div class=col-xs-6>
+                      <a href=# class=trade-item data-category=it>
+                          <div class=item-icon>
+                            <img alt=laptop src=images/laptop.png>
+                            <p>it</p>
+                          </div>
+                      </a>
+                    </div>
+                </div>
+                  <div class=row>
+                    <div class=col-xs-6>
+                      <a href=# class=trade-item data-category=uroda>
+                          <div class=item-icon>
+                            <img alt=uroda src=images/cosmetics.png>
+                            <p>uroda</p>
+                          </div>
+                      </a>
+                    </div>
+                      <div class=col-xs-6>
+                        <a href=# class=trade-item data-category=budownictwo>
+                            <div class=item-icon>
+                              <img alt=work src=images/triangular-shovel-with-liquid-concrete.png>
+                              <p>Budownictwo</p>
+                            </div>
+                        </a>
+                      </div>
+                  </div>
+                    <div class=row>
+                      <div class=col-xs-6>
+                        <a href=# class=trade-item data-category=finanse>
+                            <div class=item-icon>
+                              <img alt=money src=images/money.png>
+                              <p>finanse</p>
+                            </div>
+                        </a>
+                      </div>
+                        <div class=col-xs-6>
+                          <a href=# class=trade-item data-category=moto2>
+                              <div class=item-icon>
+                                <img alt=car src=images/car.png>
+                                <p>motoryzacja</p>
+                              </div>
+                          </a>
+                        </div>
+                    </div>
+              </div>
+              <div class="col-sm-8 trade-categories" id=trade-cat-js>
+                <div class="trade-cat active cat-moto1">
+                  <h3>Motoryzacja</h3>
+                  <div class=row>
+                    <div class=col-sm-6>
+                      <a href=# class=img-container>
+                      <img alt=moto1 src=images/moto1.jpg class=img-responsive>
+                        <div class=cat-title>
+                          <span>Sprzedaz części<br>samochodowych</span>
+                        </div>
+                      </a>
+                    </div>
+                    <div class=col-sm-6>
+                      <a href=# class=img-container>
+                        <img alt=moto2 src=images/moto2.jpg class=img-responsive>
+                        <div class=cat-title>
+                          <span>Samochody uzywane</span>
+                        </div>
+                      </a>
+                    </div>
+                    <div class=col-sm-6>
+                      <a href=# class=img-container>
+                        <img alt=moto3 src=images/moto3.jpg class=img-responsive>
+                        <div class=cat-title>
+                          <span>Mechanika samochodowa</span>
+                        </div>
+                      </a>
+                    </div>
+                    <div class=col-sm-6>
+                      <a href=# class=img-container>
+                        <img alt=moto4 src=images/moto4.jpg class=img-responsive>
+                        <div class=cat-title>
+                          <span>Myjnie samochodowe</span>
+                        </div>
+                      </a>
+                    </div>
+                </div>
+              </div>
+                <div class="trade-cat cat-it">
+                  <h3>IT</h3>
+                  <div class=row>
+                    <div class=col-sm-6>
+                      <a href=# class=img-container>
+                      <img alt=moto1 src=images/moto1.jpg class=img-responsive>
+                        <div class=cat-title>
+                          <span>programing<br>samochodowych</span>
+                        </div>
+                      </a>
+                    </div>
+                    <div class=col-sm-6>
+                      <a href=# class=img-container>
+                        <img alt=moto2 src=images/moto2.jpg class=img-responsive>
+                        <div class=cat-title>
+                          <span>kody uzywane</span>
+                        </div>
+                      </a>
+                    </div>
+                    <div class=col-sm-6>
+                      <a href=# class=img-container>
+                        <img alt=moto3 src=images/moto3.jpg class=img-responsive>
+                        <div class=cat-title>
+                          <span>Mechanika kodu</span>
+                        </div>
+                      </a>
+                    </div>
+                    <div class=col-sm-6>
+                      <a href=# class=img-container>
+                        <img alt=moto4 src=images/moto4.jpg class=img-responsive>
+                        <div class=cat-title>
+                          <span>Myjnie laptopow</span>
+                        </div>
+                      </a>
+                    </div>
+                </div>
+              </div>
+                <div class="trade-cat cat-uroda">
+                  <h3>Uroda</h3>
+                  <div class=row>
+                    <div class=col-sm-6>
+                      <a href=# class=img-container>
+                      <img alt=moto1 src=images/moto1.jpg class=img-responsive>
+                        <div class=cat-title>
+                          <span>tapetowanie</span>
+                        </div>
+                      </a>
+                    </div>
+                    <div class=col-sm-6>
+                      <a href=# class=img-container>
+                        <img alt=moto2 src=images/moto2.jpg class=img-responsive>
+                        <div class=cat-title>
+                          <span>gładź</span>
+                        </div>
+                      </a>
+                    </div>
+                    <div class=col-sm-6>
+                      <a href=# class=img-container>
+                        <img alt=moto3 src=images/moto3.jpg class=img-responsive>
+                        <div class=cat-title>
+                          <span>gipsowanie</span>
+                        </div>
+                      </a>
+                    </div>
+                    <div class=col-sm-6>
+                      <a href=# class=img-container>
+                        <img alt=moto4 src=images/moto4.jpg class=img-responsive>
+                        <div class=cat-title>
+                          <span>usuwanie tapet</span>
+                        </div>
+                      </a>
+                    </div>
+                </div>
+                </div>
+                <div class="trade-cat cat-budownictwo">
+                  <h3>Budownictwo</h3>
+                  <div class=row>
+                    <div class=col-sm-6>
+                      <a href=# class=img-container>
+                      <img alt=moto1 src=images/moto1.jpg class=img-responsive>
+                        <div class=cat-title>
+                          <span>programing<br>tak</span>
+                        </div>
+                      </a>
+                    </div>
+                    <div class=col-sm-6>
+                      <a href=# class=img-container>
+                        <img alt=moto2 src=images/moto2.jpg class=img-responsive>
+                        <div class=cat-title>
+                          <span>kody zuzywane</span>
+                        </div>
+                      </a>
+                    </div>
+                    <div class=col-sm-6>
+                      <a href=# class=img-container>
+                        <img alt=moto3 src=images/moto3.jpg class=img-responsive>
+                        <div class=cat-title>
+                          <span>Mech jedzenie kodu</span>
+                        </div>
+                      </a>
+                    </div>
+                    <div class=col-sm-6>
+                      <a href=# class=img-container>
+                        <img alt=moto4 src=images/moto4.jpg class=img-responsive>
+                        <div class=cat-title>
+                          <span>laptopow myjnie</span>
+                        </div>
+                      </a>
+                    </div>
+                </div>
+                </div>
+                <div class="trade-cat cat-finanse">
+                  <h3>Finanse</h3>
+                  <div class=row>
+                    <div class=col-sm-6>
+                      <a href=# class=img-container>
+                      <img alt=moto1 src=images/moto1.jpg class=img-responsive>
+                        <div class=cat-title>
+                          <span>pr Lorem ipsum. mochodowych</span>
+                        </div>
+                      </a>
+                    </div>
+                    <div class=col-sm-6>
+                      <a href=# class=img-container>
+                        <img alt=moto2 src=images/moto2.jpg class=img-responsive>
+                        <div class=cat-title>
+                          <span>Lorem ipsum dolor<br>sit amet, consectetur.</span>
+                        </div>
+                      </a>
+                    </div>
+                    <div class=col-sm-6>
+                      <a href=# class=img-container>
+                        <img alt=moto3 src=images/moto3.jpg class=img-responsive>
+                        <div class=cat-title>
+                          <span>test Lorem ipsum.</span>
+                        </div>
+                      </a>
+                    </div>
+                    <div class=col-sm-6>
+                      <a href=# class=img-container>
+                        <img alt=moto4 src=images/moto4.jpg class=img-responsive>
+                        <div class=cat-title>
+                          <span>test test</span>
+                        </div>
+                      </a>
+                    </div>
+                </div>
+                </div>
+                <div class="trade-cat cat-moto2">
+                  <h3>Motoryzacja2</h3>
+                  <div class=row>
+                    <div class=col-sm-6>
+                      <a href=# class=img-container>
+                      <img alt=moto1 src=images/moto1.jpg class=img-responsive>
+                        <div class=cat-title>
+                          <span>progfsfsdfs<br>s252tw bwdf 34owych</span>
+                        </div>
+                      </a>
+                    </div>
+                    <div class=col-sm-6>
+                      <a href=# class=img-container>
+                        <img alt=moto2 src=images/moto2.jpg class=img-responsive>
+                        <div class=cat-title>
+                          <span>kody ttsdfsdfsd</span>
+                        </div>
+                      </a>
+                    </div>
+                    <div class=col-sm-6>
+                      <a href=# class=img-container>
+                        <img alt=moto3 src=images/moto3.jpg class=img-responsive>
+                        <div class=cat-title>
+                          <span>Lorem ipsum dolor.</span>
+                        </div>
+                      </a>
+                    </div>
+                    <div class=col-sm-6>
+                      <a href=# class=img-container>
+                        <img alt=moto4 src=images/moto4.jpg class=img-responsive>
+                        <div class=cat-title>
+                          <span>Lorem ipsum dolor sit.</span>
+                        </div>
+                      </a>
+                    </div>
+                </div>
+                </div>
+              </div>
+            </div>
+      </div>
+    </section>
+    <section class=page-offer>
+      <div class=container>
+        <header>
+          <h2>Oferta</h2>
+          <p>zapoznaj się z naszą ofertą</p>
+        </header>
+        <div class=row>
+          <div class=col-sm-4>
+            <div class="offer-item text-center">
+              <h3>Pakiet start</h3>
+              <p><span class="glyphicon glyphicon-ok green" aria-hidden=true></span> wpis w kategorii</p>
+              <p><span class="glyphicon glyphicon-ok green" aria-hidden=true></span> wpis w kategorii</p>
+              <p><span class="glyphicon glyphicon-ok green" aria-hidden=true></span> wpis w kategorii</p>
+              <div class=offer-price>
+                <button class=offer-button type=button name=price>Za darmo</button>
+              </div>
+            </div>
+          </div>
+          <div class=col-sm-4>
+            <div class="offer-item text-center item-recommended">
+              <h3>Pakiet standard</h3>
+              <p><span class="glyphicon glyphicon-ok green" aria-hidden=true></span> wpis w kategorii</p>
+              <p><span class="glyphicon glyphicon-ok green" aria-hidden=true></span> wpis w kategorii</p>
+              <p><span class="glyphicon glyphicon-ok green" aria-hidden=true></span> wpis w kategorii</p>
+              <p><span class="glyphicon glyphicon-ok green" aria-hidden=true></span> wpis w kategorii</p>
+              <div class=offer-price>
+                <button class=offer-button type=button name=price>150 zł / rok</button>
+              </div>
+            </div>
+          </div>
+          <div class=col-sm-4>
+            <div class="offer-item text-center">
+              <h3>Pakiet premium</h3>
+              <p><span class="glyphicon glyphicon-ok green" aria-hidden=true></span> wpis w kategorii</p>
+              <p><span class="glyphicon glyphicon-ok green" aria-hidden=true></span> wpis w kategorii</p>
+              <p><span class="glyphicon glyphicon-ok green" aria-hidden=true></span> wpis w kategorii</p>
+              <p><span class="glyphicon glyphicon-ok green" aria-hidden=true></span> wpis w kategorii</p>
+              <p><span class="glyphicon glyphicon-ok green" aria-hidden=true></span> wpis w kategorii</p>
+              <div class=offer-price>
+                <button class=offer-button type=button name=price>250 zł / rok</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class=page-footer>
+      <h2 class=sr-only>Stopka</h2>
+      <div class=container>
+        <p>&copy; Coded by Piotr Kałuża 2016 </p>
+      </div>
+    </footer>
+  <script src=https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js crossorigin=anonymous integrity=sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa></script>
+  <script src=js/script.js async></script>
